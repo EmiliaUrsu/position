@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Relative positioning</title>
+    <style>
+        body{
+         background-color: #444;
+        }
+        .parent{
+           /* border: yellow 2px solid;
+            padding: 10px;
+            display: inline-block; */
+        }
+        .parent div{
+            width: 100px;
+            height: 100px;
+
+        }
+        .parent :first-child{
+            background-color: #666;
+            position: absolute;
+            top: 170px;
+            left: 170px;
+            z-index: 2;
+        }
+        .parent :nth-child(2){
+            background-color: #777;
+            position: absolute;
+            top: 110px;
+            left: 110px;
+            z-index: 1;
+        }
+        .parent :nth-child(3){
+            background-color: #BBB;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child-1">1</div>
+        <div class="child-2">2</div>
+        <div class="child-3">3</div>
+    </div>
+</body>
+</html>
